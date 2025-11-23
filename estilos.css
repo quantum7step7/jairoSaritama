@@ -1,0 +1,249 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f7fb;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+.site-header {
+    background-color: #e3f2fd;
+    border-bottom: 1px solid #cfd8dc;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.site-header h1 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #1565c0;
+}
+
+
+.main-nav a {
+    margin-left: 1rem;
+    text-decoration: none;
+    color: #1565c0;
+    font-weight: 500;
+}
+
+.main-nav a:hover {
+    text-decoration: underline;
+}
+
+
+.container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+
+.card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 {
+    margin-bottom: 1rem;
+    color: #0d47a1;
+}
+
+/* Biografía */
+.bio-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.bio-text {
+    flex: 2 1 250px;
+}
+
+.bio-photo {
+    flex: 1 1 200px;
+    text-align: center;
+}
+
+.bio-photo img {
+    max-width: 180px;
+    border-radius: 50%;
+    border: 3px solid #bbdefb;
+}
+
+.hobbies-list {
+    list-style: disc;
+    padding-left: 1.5rem;
+}
+
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #cfd8dc;
+    border-radius: 4px;
+    font-size: 0.95rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #42a5f5;
+    box-shadow: 0 0 0 1px rgba(66, 165, 245, 0.4);
+}
+
+.error-message {
+    display: block;
+    margin-top: 0.3rem;
+    font-size: 0.8rem;
+    color: #c62828;
+}
+
+/* Botón */
+.btn-primary {
+    background-color: #42a5f5;
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background-color: #1e88e5;
+}
+
+/* Footer */
+.site-footer {
+    margin-top: 2rem;
+    padding: 1rem;
+    text-align: center;
+    background-color: #e3f2fd;
+    border-top: 1px solid #cfd8dc;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* ================================ */
+/* Secciones del negocio de accesorios */
+/* ================================ */
+
+.product-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: flex-start;
+    margin-top: 0.5rem;
+}
+
+.product-text {
+    flex: 2 1 260px;
+}
+
+.product-text p {
+    margin-bottom: 0.9rem;
+}
+
+.product-image {
+    flex: 1 1 220px;
+    text-align: center;
+}
+
+.product-image img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.product-image figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: #555;
+}
+
+/* Lista de características */
+.feature-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0.5rem;
+}
+
+.feature-list li {
+    position: relative;
+    padding-left: 1.3rem;
+    margin-bottom: 0.4rem;
+}
+
+.feature-list li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #2e7d32;
+    font-size: 0.85rem;
+}
+
+.testimonials-card h2 {
+    margin-bottom: 0.7rem;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.testimonial {
+    background-color: #f5f7fb;
+    border-radius: 6px;
+    padding: 0.9rem 1rem;
+    border: 1px solid #e0e4f0;
+}
+
+.testimonial-text {
+    font-size: 0.9rem;
+}
+
+.testimonial-name {
+    margin-top: 0.5rem;
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: #1565c0;
+}
+
+.product-image-full {
+    margin-top: 1.2rem;
+}
+
+@media (max-width: 600px) {
+    .product-layout {
+        flex-direction: column;
+    }
+}

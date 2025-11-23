@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Contacto - Jairo Saritama</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <h1>Jairo Saritama</h1>
+        <nav class="main-nav">
+            <a href="index.html">Inicio</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <h2>Contáctame</h2>
+            <p>Completa el siguiente formulario para enviarme un mensaje.</p>
+
+            <form id="contactForm" novalidate>
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        required
+                        pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñ\\s]+$"
+                        title="El nombre solo puede contener letras y espacios."
+                        placeholder="Ingresa tu nombre completo">
+                    <small class="error-message" id="error-nombre"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="correo">Correo</label>
+                    <input
+                        type="email"
+                        id="correo"
+                        name="correo"
+                        required
+                        placeholder="tucorreo@ejemplo.com">
+                    <small class="error-message" id="error-correo"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensaje">Mensaje (máx. 100 caracteres)</label>
+                    <textarea
+                        id="mensaje"
+                        name="mensaje"
+                        rows="4"
+                        maxlength="100"
+                        required
+                        placeholder="Escribe tu mensaje (máximo 100 caracteres)"></textarea>
+                    <small class="error-message" id="error-mensaje"></small>
+                </div>
+
+                <button type="submit" class="btn-primary">Enviar mensaje</button>
+
+                <!-- Mensaje de éxito -->
+                <p id="successMessage" style="margin-top: 1rem; color: green; font-weight: 600;"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2025 Jairo Saritama - Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>
