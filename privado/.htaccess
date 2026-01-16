@@ -1,0 +1,7 @@
+# =========================
+# Protección con contraseña (Basic Auth)
+# =========================
+AuthType Basic
+AuthName "Area Privada"
+AuthUserFile "C:/xampp/htdocs/misitio/.htpasswd"
+Require valid-user

@@ -1,0 +1,45 @@
+# Habilitar reglas básicas
+
+Options -Indexes
+
+# Bloquear acceso a archivos ocultos sensibles (.htaccess, .htpasswd, etc.)
+<FilesMatch "^\.ht">
+    Require all denied
+</FilesMatch>
+
+
+# Página 404 personalizada
+
+ErrorDocument 404 /misitio/404.html
+
+
+# Reescritura / Redirecciones
+
+RewriteEngine On
+
+# Si estás usando carpeta dentro de htdocs (ej: /misitio), deja esta línea.
+# Si usas un VirtualHost tipo misitio.local apuntando directo a esta carpeta, cambia a: RewriteBase /
+RewriteBase /misitio/
+
+
+# 1) Redirección HTTP -> HTTPS
+
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+
+# 2) Bloquear acceso HTTP directo al archivo de CRUD
+#    (aunque PHP sí podrá incluirlo por filesystem)
+
+RewriteRule ^admin/crud\.php$ - [F,L]
+
+
+# 3) Redirigir URL vieja producto.php?id=3 a /producto/3
+
+RewriteCond %{QUERY_STRING} (^|&)id=([0-9]+)(&|$) [NC]
+RewriteRule ^producto\.php$ producto/%2? [R=301,L]
+
+
+# 4) URL amigable /producto/3 -> producto.php?id=3
+
+RewriteRule ^producto/([0-9]+)/?$ producto.php?id=$1 [L,QSA]

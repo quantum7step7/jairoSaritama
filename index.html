@@ -1,152 +1,87 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Inicio - Jairo Saritama</title>
-    <link rel="stylesheet" href="estilos.css">
-    <script src="main.js" defer></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MiSitio - Login</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <header class="site-header">
-        <h1>Jairo Saritama</h1>
-        <nav class="main-nav">
-            <a href="index.html">Inicio</a>
-            <a href="contacto.html">Contacto</a>
-        </nav>
-    </header>
+  <div class="wrap">
+    <div class="card">
+      <div class="header">
+        <div class="brand">
+          <h1>MiSitio</h1>
+          <p>Acceso al panel y prueba de reglas .htaccess</p>
+        </div>
+        <a class="badge" href="producto/3">Probar /producto/3</a>
+      </div>
 
-    <main class="container">
-        <section class="card">
-            <h2>Biografía</h2>
-            <div class="bio-layout">
-                <div class="bio-text">
-                    <p>
-                        Hola, soy Jairo Saritama. Soy una persona apasionada por la tecnología, 
-                        el aprendizaje continuo y el desarrollo de proyectos creativos.
-                        Me gusta explorar nuevas herramientas, ayudar a otras personas 
-                        a aprender y trabajar en soluciones prácticas para problemas reales.
-                    </p>
-                </div>
-                <div class="bio-photo">
-                    <!-- Cambia la ruta de la imagen a la que tú tengas -->
-                    <img src="imagenes/jairo.jpeg" alt="Foto de Jairo Saritama">
-                </div>
+      <div class="main">
+        <div class="pane hero">
+          <h2 style="margin:0 0 8px 0;font-size:22px;">Proyecto con .htaccess</h2>
+          <p style="margin:0;color:var(--muted);line-height:1.55;">
+            Este sitio demuestra redirecciones, protección con contraseña, página 404 y URLs amigables.
+          </p>
+
+          <div class="kpi">
+            <div class="box">
+              <div class="n">HTTPS</div>
+              <div class="t">Forzado por .htaccess</div>
             </div>
-        </section>
-
-        <section class="card">
-            <h2>Hobbies</h2>
-            <ul class="hobbies-list">
-                <li>Programación y desarrollo web</li>
-                <li>Videojuegos</li>
-                <li>Lectura sobre ciencia y tecnología</li>
-                <li>Escuchar música</li>
-                <li>Aprender cosas nuevas en línea</li>
-            </ul>
-
-           
-            <img src="imagenes/libroEstudio.jpg" alt="">
-
-        </section>
-
-        <!-- NUEVA SECCIÓN: Descripción del producto o servicio -->
-        <section class="card product-card">
-            <h2>Mi futuro negocio de accesorios para computadoras</h2>
-            <div class="product-layout">
-                <div class="product-text">
-                    <p>
-                        Estoy planificando un pequeño negocio de venta de accesorios para computadora, 
-                        pensado para quienes estudian, trabajan desde casa o juegan en PC. 
-                        La idea es ofrecer teclados y mouse inalámbricos, discos duros externos, 
-                        hubs USB, audífonos, bocinas y otros periféricos que ayudan a crear 
-                        un espacio de trabajo cómodo y eficiente.
-                    </p>
-                    <p>
-                        Quiero trabajar con marcas conocidas del mercado gamer y de oficina, 
-                        cuidando que cada producto tenga buena relación entre calidad y precio 
-                        y que las entregas a domicilio sean rápidas y seguras dentro del país.
-                    </p>
-                </div>
-
-                <figure class="product-image">
-                    <img
-                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Laptop_computer.jpg/960px-Laptop_computer.jpg"
-                        alt="Escritorio con laptop y accesorios de computadora">
-                   
-                </figure>
+            <div class="box">
+              <div class="n">404</div>
+              <div class="t">Página personalizada</div>
             </div>
-        </section>
-
-        <!--  Características principales -->
-        <section class="card features-card">
-            <h2>Características de mi futuro servicio</h2>
-            <div class="product-layout">
-                <div class="product-text">
-                    <p>
-                        La tienda está pensada para que cualquier persona pueda armar o mejorar 
-                        su equipo sin complicarse. Estas son algunas de las ideas que quiero aplicar:
-                    </p>
-                    <ul class="feature-list">
-                        <li>Catálogo variado de periféricos: teclados, mouse, discos externos, hubs USB, bocinas y routers Wi-Fi.</li>
-                        <li>Productos para distintos perfiles: gamers, estudiantes, creadores de contenido y trabajo de oficina.</li>
-                        <li>Asesoría por chat para elegir componentes compatibles según la computadora del cliente.</li>
-                        <li>Compras en línea con envíos a domicilio en pocos días y seguimiento del pedido.</li>
-                        <li>Garantía en los accesorios y cambios ágiles si el producto llega con fallas.</li>
-                    </ul>
-                </div>
-
-                <figure class="product-image">
-                    <img
-                        src="imagenes/mi_futura_tienda.jpg"
-                        alt="Teclado y mouse inalámbricos modernos">
-                    <figcaption>Periféricos modernos para hacer más cómodo el uso de la computadora.</figcaption>
-                </figure>
+            <div class="box">
+              <div class="n">Rewrite</div>
+              <div class="t">/producto/ID</div>
             </div>
-        </section>
+          </div>
 
-        <!--  clientes -->
-        <section class="card testimonials-card">
-            <h2>Testimonios de clientes </h2>
-            <div class="testimonials-grid">
-                <article class="testimonial">
-                    <p class="testimonial-text">
-                        “Hice el pedido de un combo de teclado y mouse un jueves y al día siguiente 
-                        por la tarde ya lo estaba usando. Llegó bien embalado, en perfecto estado 
-                        y exactamente como se veía en la página.”
-                    </p>
-                    <p class="testimonial-name">— Ana, estudiante universitaria</p>
-                </article>
+          <p class="note" style="margin-top:18px;">
+            Credenciales demo: <b>admin@demo.local</b> / <b>1234</b>
+          </p>
+          <p class="note">
+            Prueba carpeta protegida: <a href="privado/">/privado/</a>
+          </p>
+        </div>
 
-                <article class="testimonial">
-                    <p class="testimonial-text">
-                        “Tenía dudas de comprar fuera de las grandes tiendas, pero la atención por 
-                        WhatsApp fue muy clara. Me ayudaron a escoger un disco externo compatible 
-                        con mi laptop y resolvieron todas mis preguntas antes de pagar.”
-                    </p>
-                    <p class="testimonial-name">— Carlos, profesional freelance</p>
-                </article>
+        <div class="pane">
+          <div id="msg" class="alert error" style="display:none;"></div>
 
-                <article class="testimonial">
-                    <p class="testimonial-text">
-                        “Compré unos audífonos y un mouse gamer. El precio fue competitivo y el 
-                        envío llegó antes de lo esperado. Me gustó que explican bien las 
-                        características y dan recomendaciones según el tipo de uso.”
-                    </p>
-                    <p class="testimonial-name">— Diana, aficionada a los videojuegos</p>
-                </article>
+          <form class="form" action="login.php" method="post">
+            <div>
+              <div class="label">Correo</div>
+              <input class="input" name="email" type="email" placeholder="admin@demo.local" required />
+            </div>
+            <div>
+              <div class="label">Contraseña</div>
+              <input class="input" name="password" type="password" placeholder="1234" required />
             </div>
 
-            <figure class="product-image product-image-full">
-                <img
-                    src="imagenes/laptop.jpg"
-                    alt="Escritorio con computadora y accesorios de tecnología">
-               
-            </figure>
-        </section>
-    </main>
+            <div class="row">
+              <button class="btn" type="submit">Iniciar sesión</button>
+              <a class="btn btn-ghost" href="privado/">Ir a /privado/</a>
+            </div>
 
-    <footer class="site-footer">
-        <p>&copy; 2025 Jairo Saritama - Todos los derechos reservados</p>
-    </footer>
+            <p class="note">
+              Si tu Apache local no tiene SSL configurado, la redirección a HTTPS puede mostrar error de certificado.
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const p = new URLSearchParams(location.search);
+    const err = p.get("error");
+    if (err) {
+      const el = document.getElementById("msg");
+      el.style.display = "block";
+      el.textContent = "Credenciales inválidas. Usa admin@demo.local / 1234.";
+    }
+  </script>
 </body>
 </html>
