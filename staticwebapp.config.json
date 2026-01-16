@@ -1,0 +1,24 @@
+{
+  "navigationFallback": {
+    "rewrite": "/404.html",
+    "exclude": ["/images/*", "/css/*", "/js/*"]
+  },
+  "routes": [
+    {
+      "route": "/admin/*",
+      "allowedRoles": []
+    },
+    {
+      "route": "/producto/{id}",
+      "rewrite": "/producto.html?id={id}"
+    }
+  ],
+  "responseOverrides": {
+    "404": {
+      "rewrite": "/404.html"
+    },
+    "403": {
+      "rewrite": "/403.html"
+    }
+  }
+}

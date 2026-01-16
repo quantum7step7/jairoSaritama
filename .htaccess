@@ -43,3 +43,13 @@ RewriteRule ^producto\.php$ producto/%2? [R=301,L]
 # 4) URL amigable /producto/3 -> producto.php?id=3
 
 RewriteRule ^producto/([0-9]+)/?$ producto.php?id=$1 [L,QSA]
+
+
+# 5) Proteger carpeta privado con contraseña (.htpasswd)
+
+<Directory "C:/xampp/htdocs/misitio/privado">
+    AuthType Basic
+    AuthName "Area protegida"
+    AuthUserFile "C:/xampp/htdocs/misitio/.htpasswd"
+    Require valid-user
+</Directory>
