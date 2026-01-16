@@ -4,24 +4,74 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>404 - No encontrado</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="estilosError.css" />
 </head>
 <body>
   <div class="wrap">
-    <div class="card" style="max-width:820px;">
-      <div class="header">
+    <div class="card">
+      <header class="top">
         <div class="brand">
-          <h1>Error 403</h1>
-          <p>Página personalizada configurada en .htaccess</p>
+          <div class="pill">Error 404</div>
+          <h1>Página no encontrada</h1>
+          <p>La ruta que estás buscando no existe o fue movida.</p>
         </div>
-        <a class="btn btn-ghost" href="index.html">Ir al inicio</a>
-      </div>
-      <div class="pane">
-        <h2 style="margin:0 0 8px 0;">No se encontró la ruta solicitada</h2>
-        <p style="margin:0;color:var(--muted);line-height:1.6;">
-          Verifica la URL o vuelve al inicio. Esta página demuestra el control de errores con ErrorDocument.
-        </p>
-      </div>
+
+        <a class="btn btn-ghost" href="index.html">Volver al inicio</a>
+      </header>
+
+      <main class="content">
+        <section class="left">
+          <h2>¿Qué puedes hacer ahora?</h2>
+          <ul class="tips">
+            <li>Revisa si la URL está bien escrita.</li>
+            <li>Vuelve al inicio y navega desde el menú.</li>
+            <li>Si el enlace te lo compartieron, pide que lo verifiquen.</li>
+          </ul>
+
+          <div class="actions">
+            <a class="btn" href="index.html">Ir a inicio</a>
+            <a class="btn btn-secondary" href="producto/3">Probar /producto/3</a>
+          </div>
+
+          <p class="note">
+            Sugerencia para evidencias: prueba una ruta como <b>/misitio/no-existe</b> para disparar este 404.
+          </p>
+        </section>
+
+        <aside class="right" aria-label="Ilustración de error 404">
+          <div class="imgBox">
+            <img
+              src="https://images.unsplash.com/photo-1526378722484-bd91ca387e72?auto=format&fit=crop&w=1200&q=70"
+              alt="Imagen decorativa para página 404"
+              loading="lazy"
+            />
+            <div class="imgOverlay">
+              <div class="big">404</div>
+              <div class="small">Ruta no encontrada</div>
+            </div>
+          </div>
+
+          <div class="mini">
+            <div class="miniCard">
+              <div class="miniTitle">Código</div>
+              <div class="miniValue">404</div>
+            </div>
+            <div class="miniCard">
+              <div class="miniTitle">Estado</div>
+              <div class="miniValue">No encontrado</div>
+            </div>
+            <div class="miniCard">
+              <div class="miniTitle">Acción</div>
+              <div class="miniValue">Volver</div>
+            </div>
+          </div>
+        </aside>
+      </main>
+
+      <footer class="footer">
+        <span>CelularesExpress • Página de error personalizada</span>
+        <span class="muted">Si el problema continúa, contacta al administrador.</span>
+      </footer>
     </div>
   </div>
 </body>

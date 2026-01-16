@@ -11,43 +11,127 @@
     <div class="card">
       <div class="header">
         <div class="brand">
-          <h1>MiSitio</h1>
-          <p>Acceso al panel y prueba de reglas .htaccess</p>
+          <h1>CelularesExpress</h1>
+          <p>Acceso al panel y prueba de reglas del servidor</p>
         </div>
-        <a class="badge" href="producto/3">Probar /producto/3</a>
+        <a class="badge" href="producto/3">Ver demo /producto/3</a>
       </div>
 
       <div class="main">
         <div class="pane hero">
-          <h2 style="margin:0 0 8px 0;font-size:22px;">Proyecto con .htaccess</h2>
+          <h2 style="margin:0 0 8px 0;font-size:22px;">Tienda de celulares</h2>
           <p style="margin:0;color:var(--muted);line-height:1.55;">
-            Este sitio demuestra redirecciones, protección con contraseña, página 404 y URLs amigables.
+            Catálogo de muestra para demostrar redirecciones, carpeta protegida, error 404 personalizado y URLs amigables.
           </p>
 
           <div class="kpi">
             <div class="box">
               <div class="n">HTTPS</div>
-              <div class="t">Forzado por .htaccess</div>
+              <div class="t">Redirección automática</div>
             </div>
             <div class="box">
               <div class="n">404</div>
               <div class="t">Página personalizada</div>
             </div>
             <div class="box">
-              <div class="n">Rewrite</div>
+              <div class="n">URL limpia</div>
               <div class="t">/producto/ID</div>
             </div>
           </div>
 
           <p class="note" style="margin-top:18px;">
-            Credenciales demo: <b>admin@demo.local</b> / <b>1234</b>
+            Usuario demo: <b>admin@demo.local</b> &nbsp;|&nbsp; Clave demo: <b>1234</b>
           </p>
           <p class="note">
-            Prueba carpeta protegida: <a href="privado/">/privado/</a>
+            Área protegida: <a href="privado/">/privado/</a>
           </p>
+
+          <div class="section">
+            <div class="section-title">Destacados de la semana</div>
+
+            <div class="products">
+              <article class="product">
+                <div class="product-img">
+                  <img
+                    src="https://commons.wikimedia.org/wiki/Special:FilePath/IPhone%2014%20Product%20Red.jpg"
+                    alt="iPhone 14 (Product Red)"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="product-body">
+                  <div class="product-name">iPhone 14 (Red)</div>
+                  <div class="product-meta">Edición demostrativa • Stock limitado</div>
+                  <div class="product-footer">
+                    <span class="price">$799</span>
+                    <a class="btn btn-ghost" href="producto/3?modelo=iphone14">Ver</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="product">
+                <div class="product-img">
+                  <img
+                    src="https://commons.wikimedia.org/wiki/Special:FilePath/Back%20of%20the%20Samsung%20Galaxy%20S23.jpg"
+                    alt="Samsung Galaxy S23"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="product-body">
+                  <div class="product-name">Galaxy S23</div>
+                  <div class="product-meta">Cámara Pro • Rendimiento premium</div>
+                  <div class="product-footer">
+                    <span class="price">$749</span>
+                    <a class="btn btn-ghost" href="producto/3?modelo=s23">Ver</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="product">
+                <div class="product-img">
+                  <img
+                    src="https://commons.wikimedia.org/wiki/Special:FilePath/Redmi%20Note%2012%20front.jpg"
+                    alt="Redmi Note 12"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="product-body">
+                  <div class="product-name">Redmi Note 12</div>
+                  <div class="product-meta">Equilibrado • Batería destacada</div>
+                  <div class="product-footer">
+                    <span class="price">$249</span>
+                    <a class="btn btn-ghost" href="producto/3?modelo=redmi12">Ver</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="product">
+                <div class="product-img">
+                  <img
+                    src="https://commons.wikimedia.org/wiki/Special:FilePath/Google%20Pixel%208%20illustration.png"
+                    alt="Google Pixel 8"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="product-body">
+                  <div class="product-name">Pixel 8</div>
+                  <div class="product-meta">IA en fotos • Android puro</div>
+                  <div class="product-footer">
+                    <span class="price">$699</span>
+                    <a class="btn btn-ghost" href="producto/3?modelo=pixel8">Ver</a>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <p class="note" style="margin-top:12px;">
+              Tip: para probar tu <b>404 personalizado</b>, escribe una ruta inexistente (ej. <b>/misitio/no-existe</b>).
+            </p>
+          </div>
         </div>
 
         <div class="pane">
+          <div class="pane-title">Iniciar sesión</div>
+
           <div id="msg" class="alert error" style="display:none;"></div>
 
           <form class="form" action="login.php" method="post">
@@ -55,18 +139,19 @@
               <div class="label">Correo</div>
               <input class="input" name="email" type="email" placeholder="admin@demo.local" required />
             </div>
+
             <div>
               <div class="label">Contraseña</div>
               <input class="input" name="password" type="password" placeholder="1234" required />
             </div>
 
             <div class="row">
-              <button class="btn" type="submit">Iniciar sesión</button>
-              <a class="btn btn-ghost" href="privado/">Ir a /privado/</a>
+              <button class="btn" type="submit">Entrar al panel</button>
+              <a class="btn btn-ghost" href="privado/">Ir al área privada</a>
             </div>
 
             <p class="note">
-              Si tu Apache local no tiene SSL configurado, la redirección a HTTPS puede mostrar error de certificado.
+              Si tu servidor local no tiene SSL configurado, la redirección a HTTPS puede mostrar advertencias del navegador.
             </p>
           </form>
         </div>
@@ -80,7 +165,7 @@
     if (err) {
       const el = document.getElementById("msg");
       el.style.display = "block";
-      el.textContent = "Credenciales inválidas. Usa admin@demo.local / 1234.";
+      el.textContent = "Acceso denegado. Prueba con admin@demo.local / 1234.";
     }
   </script>
 </body>
